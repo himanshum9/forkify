@@ -1,5 +1,5 @@
 {
-  "name": "Your Recipe",
+  "name": "YourRecipe",
   "version": "1.0.0",
   "description": "Find every Recipe",
   "main": "index.js",
@@ -19,6 +19,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "html-webpack-plugin": "^4.2.2"
   }
