@@ -13,19 +13,18 @@ const controlSearch = async() => {
 	const query = searchView.getInput();
 	if (query) {
 	state.search = new Search(query);
+	searchView.clearResult();
 	searchView.clearInput();
+
 	state.search.recipe = await state.search.getResults();
-	// console.log(state.search.recipe);
 	searchView.renderResults(state.search.recipe);
 	}
 }
 elements.searchForm.addEventListener('submit', e=>{
 	e.preventDefault();
 	controlSearch();
-	alert('hey');
-	
 });
-const search = new Search('pizza');
-const recipe = search.getResults();
-console.log(recipe);
-console.log(search);
+// const search = new Search('pizza');
+// const recipe = search.getResults();
+// console.log(recipe);
+// console.log(search);

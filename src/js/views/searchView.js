@@ -1,7 +1,10 @@
 import {elements} from './base';
 export const getInput = () => elements.searchInput.value;
 export const clearInput = () => {
-	elements.searchInput.value('');
+	elements.searchInput.value='';
+}
+export const clearResult = () => {
+	elements.searchResArray.innerHTML='';
 }
 const renderRecipe = recipe =>{
 	const markup = `
