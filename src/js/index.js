@@ -13,8 +13,10 @@ const controlSearch = async() => {
 	const query = searchView.getInput();
 	if (query) {
 	state.search = new Search(query);
+	searchView.clearInput();
 	state.search.recipe = await state.search.getResults();
-	console.log(state.search.recipe);
+	// console.log(state.search.recipe);
+	searchView.renderResults(state.search.recipe);
 	}
 }
 elements.searchForm.addEventListener('submit', e=>{
