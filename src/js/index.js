@@ -26,6 +26,15 @@ elements.searchForm.addEventListener('submit', e=>{
 	e.preventDefault();
 	controlSearch();
 });
+elements.searchResPag.addEventListener('click', e=>{
+	const button = e.target.closest('.btn-inline');
+	console.log(button);
+	if (button) {
+		const page = button.dataset.goto;
+		searchView.clearResult();
+		searchView.renderResults(state.search.recipe,page);
+	}
+});
 // const search = new Search('pizza');
 // const recipe = search.getResults();
 // console.log(recipe);

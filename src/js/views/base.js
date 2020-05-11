@@ -2,7 +2,8 @@ export const elements = {
 	searchForm: document.querySelector('.search'),
 	searchInput: document.querySelector('.search__field'),
 	searcResDiv: document.querySelector('.results'),
-	searchResArray: document.querySelector('.results__list')
+	searchResArray: document.querySelector('.results__list'),
+	searchResPag: document.querySelector('.results__pages')
 }
 export const elementsStrings = {
 	loader:'loader'
