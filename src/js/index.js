@@ -28,9 +28,8 @@ elements.searchForm.addEventListener('submit', e=>{
 });
 elements.searchResPag.addEventListener('click', e=>{
 	const button = e.target.closest('.btn-inline');
-	console.log(button);
 	if (button) {
-		const page = button.dataset.goto;
+		const page = parseInt(button.dataset.goto,10);
 		searchView.clearResult();
 		searchView.renderResults(state.search.recipe,page);
 	}
